@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - node
+  - '6'
+branches:
+  except:
+    - master
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./scripts/deploy.sh
+  'on':
+    branch: develop
+    node: '6'
+env:
+  global:
+    - secure: >-
+        nYWg+RcbueUP5fL7Ed+0YT3U/RB6yVe6sqrRBZhJ6VkuABQeEnXDxM2w2ZaRFRts1ZFbtpVVkNZp7aWrotrb+DyDPQQp+tBNngMT6vzIThJENzwN+tJ6A/F74HrDwByBwFI/Waw1iS1sHZ61s1l32Xg1xse/D6tkwLB0Lkkgd+a6S++HOGr8NOO2brjYDHZXwil9OOHOhviI8j7u67GNtB9hM4QAIX696z1AgwKu6m3HAmK16OHaXEcop1arDkKyqYOYs76PqGACz0ZoYrAa2R1j2W9ckLxwSKS8il9Yppsd8KMpvGmZ1O5X+/n1wOBR3wf4nfboVzJHnKx3aQaZMHNvAC+vSoUN7HiBRYSofQnxj9l2nHL8inzIlhcFgYh0jcDG3k/RzdXBbzrO6CECts7IbqkQp66YaZgYaTnwIxhxAGx9cvuqCu92MYJB3QcTWQ6K1yYOmqHi3AJhxJZfM7CFkSOU2tGokWdN5m5grW3oxmAIXWrY5sKKfEgZB9yGJJ4KJbCkKzqyeeWTGn2VnFRvljtDfLHeZbe6I1WGizowcvE0TEbSQmU8FkkqydYezXPRRExNOPQKdltrVEUqkIv+HN2absQB/Il9va0exMWPcjNjIfM1tHzfwe71+hyPHr0y99HU0QfVzCK5FfxnG/Jm2CAooBeg0gpXE08dkBo=
+    - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/easybird/easyblog.be.git

@@ -1,0 +1,26 @@
+.draftEditor {
+    position: relative;
+}
+
+.feedbackBox {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 50%;
+    color: var(--colorSecondary);
+    font-size: 500%;
+    transition: all 500ms linear;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.controlPanel {
+    display: flex;
+    justify-content: space-around;
+}

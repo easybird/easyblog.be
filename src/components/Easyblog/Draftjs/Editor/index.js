@@ -8,6 +8,8 @@ if (window) {
 }
 
 class Editor extends React.Component {
+    //TODO https://quilljs.com/guides/comparison-with-other-rich-text-editors/
+    //TODO implement my own draft js version in stead of relying on react-rte..
 
     constructor(props) {
         super(props);
